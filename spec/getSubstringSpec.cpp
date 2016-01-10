@@ -49,7 +49,7 @@ namespace spec
 			int k;
 
 			for (i = 0; i <= 8; i++){
-				for (j = 5; j < 12; j++){
+				for (j = 9; j < 12; j++){
 					char *new_str = get_sub_string(str, i, j);
 					if (i <= j){
 						for (k = i; k <= j; k++){

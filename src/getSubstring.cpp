@@ -19,5 +19,40 @@ original String
 
 char * get_sub_string(char *str, int i, int j){
 
+	char *new_str=(char*)malloc(sizeof(char)*20);
+	int l = 0;
+
+	if (i>j || i == j || str==NULL)
+		return NULL;
+	else
+	{
+		for (int k = 0; str[k] != '\0';)
+		{
+			if (i == k)
+			{
+				while (str[k] != '\0')
+				{
+
+					new_str[l] = str[k];
+					if (k == j)
+					{
+
+						break;
+					}
+					k++;
+					l++;
+				}
+			}
+			else
+				k++;
+		}
+	}
+	new_str[l + 1] = '\0';
+
+	/*for (int i = 0; new_str[i] != '\0'; i++)
+		printf("%c", new_str[i]);*/
+
+	return new_str;
+
     return NULL;
 }
